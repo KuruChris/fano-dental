@@ -15,6 +15,7 @@ export default function SmoothScroll({ children }) {
       touchMultiplier: 1.4,
     })
 
+    window.__lenis = lenis
     lenis.on('scroll', ScrollTrigger.update)
 
     const ticker = (time) => {
@@ -39,6 +40,7 @@ export default function SmoothScroll({ children }) {
     return () => {
       document.removeEventListener('click', onAnchorClick)
       gsap.ticker.remove(ticker)
+      if (window.__lenis === lenis) window.__lenis = undefined
       lenis.destroy()
     }
   }, [])

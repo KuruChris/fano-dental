@@ -20,7 +20,7 @@ const pillars = [
     index: '03',
     label: 'Trust',
     title: 'A clinic Cebu families return to',
-    body: 'Patients choose Fano Dental Clinic when they want dependable care close to home in Cebu City and Naga.',
+    body: 'Patients choose Fano Dental Clinic when they want dependable care close to home across Cebu and Leyte.',
   },
 ]
 
@@ -42,7 +42,7 @@ export default function About() {
             </p>
             <p className="about-split__note">
               The Fano Dental Group team — clinicians dedicated to quality dental
-              care across Cebu City and Naga.
+              care across Cebu City, Naga, Liloan, Talisay, and Baybay, Leyte.
             </p>
           </FadeContent>
 
@@ -78,9 +78,9 @@ export default function About() {
           <AnimatedContent distance={28} duration={0.7}>
             <div className="stat">
               <p className="stat__value">
-                <CountUp to={2} duration={1.2} />
+                <CountUp to={5} duration={1.2} />
               </p>
-              <p className="stat__label">Branches in Cebu</p>
+              <p className="stat__label">Clinic branches</p>
             </div>
           </AnimatedContent>
           <AnimatedContent distance={28} delay={0.08} duration={0.7}>

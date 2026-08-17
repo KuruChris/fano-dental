@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="shell">
         <div className="hero__content">
           <AnimatedContent distance={40} duration={0.95} threshold={0.2}>
-            <p className="hero__eyebrow">Fano Dental Group · Cebu City &amp; Naga</p>
+            <p className="hero__eyebrow">Fano Dental Group · 5 branches across Cebu &amp; Leyte</p>
             <h1 className="hero__brand">
               Best Dental Clinic in Cebu
             </h1>
@@ -35,7 +35,7 @@ export default function Hero() {
             <p className="hero__lede">
               Looking for the best dental clinic in Cebu? Fano Dental Clinic
               delivers modern family and cosmetic dentistry with unhurried visits,
-              clear guidance, and trusted clinicians in Cebu City and Naga.
+              clear guidance, and trusted clinicians across Cebu and Leyte.
             </p>
           </FadeContent>
 

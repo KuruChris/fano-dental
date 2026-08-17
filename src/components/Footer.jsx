@@ -1,4 +1,5 @@
 import icon from '../assets/clinic/fano-icon.jpg'
+import { branches } from '../data/branches'
 
 const FACEBOOK_URL = 'https://www.facebook.com/fanodentalgroup'
 
@@ -13,8 +14,8 @@ export default function Footer() {
           </p>
           <p className="site-footer__tag">
             Fano Dental Group by Dr. Bartolome Fano Jr. — a trusted dental clinic
-            in Cebu City and Naga for families seeking the best dental clinic in
-            Cebu.
+            with branches across Cebu and Leyte for families seeking the best
+            dental clinic in Cebu.
           </p>
         </div>
 
@@ -32,9 +33,9 @@ export default function Footer() {
         <div>
           <p className="site-footer__heading">Branches</p>
           <ul>
-            <li><span>Cebu City — Sambag 1</span></li>
-            <li><span>Naga — East Poblacion</span></li>
-            <li><a href="#about">About the clinic</a></li>
+            {branches.map((branch) => (
+              <li key={branch.name}><span>{branch.name}</span></li>
+            ))}
           </ul>
         </div>
 
@@ -46,7 +47,7 @@ export default function Footer() {
                 Facebook
               </a>
             </li>
-            <li><span>Cebu, Philippines</span></li>
+            <li><span>Cebu &amp; Leyte, Philippines</span></li>
             <li>
               <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
                 Book Us now
@@ -58,7 +59,7 @@ export default function Footer() {
 
       <div className="shell site-footer__bottom">
         <p>© {new Date().getFullYear()} Fano Dental Clinic. All rights reserved.</p>
-        <p>Best Dental Clinic in Cebu · Cebu City &amp; Naga</p>
+        <p>Best Dental Clinic in Cebu · 5 branches</p>
       </div>
     </footer>
   )

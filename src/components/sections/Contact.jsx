@@ -2,10 +2,9 @@ import icon from '../../assets/clinic/fano-icon.jpg'
 import FadeContent from '../reactbits/FadeContent'
 import AnimatedContent from '../reactbits/AnimatedContent'
 import Magnet from '../reactbits/Magnet'
+import { branches, MAP_LINK } from '../../data/branches'
 
 const FACEBOOK_URL = 'https://www.facebook.com/fanodentalgroup'
-const MAPS_URL =
-  'https://www.google.com/maps/place/Fano+Dental+Clinic+And+Laboratory/@10.3013293,123.8933559,281m/data=!3m1!1e3!4m14!1m7!3m6!1s0x33a99956e889a9e5:0xa58384c8418d552e!2sFano+Dental+Clinic+And+Laboratory!8m2!3d10.301386!4d123.893221!16s%2Fg%2F11bwkg0d3d!3m5!1s0x33a99956e889a9e5:0xa58384c8418d552e!8m2!3d10.301386!4d123.893221!16s%2Fg%2F11bwkg0d3d?entry=ttu'
 
 const services = [
   'Oral prophylaxis',
@@ -90,17 +89,18 @@ export default function Contact() {
                 </a>
               </p>
 
-              <h3 className="contact-panel__heading">Address</h3>
-              <p className="contact-panel__text">
-                B. Fano Bldg., Urgello St., Sambag 1, Cebu City
-              </p>
-              <p className="contact-panel__text contact-panel__text--muted">
-                Also serving Naga: 2F Eugenia Bldg., N. Bacalso Ave., East
-                Poblacion
-              </p>
+              <h3 className="contact-panel__heading">Branches</h3>
+              <ul className="contact-branches">
+                {branches.map((branch) => (
+                  <li key={branch.name}>
+                    <strong>{branch.name}</strong>
+                    <span>{branch.detail}</span>
+                  </li>
+                ))}
+              </ul>
 
               <p className="contact-panel__cta-copy">
-                Prefer to visit in person? Get directions to our Cebu City clinic.
+                Prefer to visit in person? Get directions to our main Cebu City clinic.
               </p>
 
               <div className="contact-panel__actions">
@@ -116,7 +116,7 @@ export default function Contact() {
                 </Magnet>
                 <a
                   className="btn btn--ghost"
-                  href={MAPS_URL}
+                  href={MAP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
